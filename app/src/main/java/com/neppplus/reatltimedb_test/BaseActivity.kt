@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.google.firebase.database.FirebaseDatabase
 import com.neppplus.reatltimedb_test.api.APIList
 import com.neppplus.reatltimedb_test.api.ServerAPI
 
@@ -14,7 +15,7 @@ abstract class BaseActivity : AppCompatActivity() {
 
 //    모든 화면에서, apiList 변수가 있다면 => apiList.서버기능( ) 형태로 간단히 코딩 가능.
     lateinit var apiList: APIList
-
+    val db = FirebaseDatabase.getInstance("https://retrofitlibrarytest-20211122-default-rtdb.asia-southeast1.firebasedatabase.app")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
